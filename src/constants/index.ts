@@ -12,11 +12,11 @@ export const ENV: Cluster = (process.env.CLUSTER as Cluster) || "mainnet-beta";
 export const SOLANA_RPC_ENDPOINT =
   ENV === "devnet"
     ? "https://api.devnet.solana.com"
-    : "https://neat-hidden-sanctuary.solana-mainnet.discover.quiknode.pro/2af5315d336f9ae920028bbb90a73b724dc1bbed";
+    : "https://mainnet.helius-rpc.com/?api-key=c09daa25-e50f-4536-9eee-70acbec2b38d";
     // !IMPORTANT:  This example is using a quiknode free plan that is shared and has limits so should not be used for productions.
 // Wallets
 export const WALLET_PRIVATE_KEY =
-  process.env.WALLET_PRIVATE_KEY || "PASTE YOUR WALLET PRIVATE KEY";
+  process.env.one || "PASTE YOUR WALLET PRIVATE KEY";
 export const USER_PRIVATE_KEY = bs58.decode(WALLET_PRIVATE_KEY);
 export const USER_KEYPAIR = Keypair.fromSecretKey(USER_PRIVATE_KEY);
 
@@ -28,7 +28,7 @@ export const INPUT_MINT_ADDRESS =
 export const OUTPUT_MINT_ADDRESS =
   ENV === "devnet"
     ? "MERt85fc5boKw3BW1eYdxonEuJNvXbiMbs6hvheau5K" // MER
-    : "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB"; // USDT
+    : "FHfeCxmLBceMNaR7YX6fRcHEKZ7XYZtCGAebHBd4R8A3"; // USDT
 
 // Interface
 export interface Token {
